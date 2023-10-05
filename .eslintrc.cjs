@@ -16,5 +16,15 @@ module.exports = {
       'warn',
       { allowConstantExport: true },
     ],
+    quotes: ['error', 'single'],
   },
-}
+  overrides: [
+    {
+      files: ['*.js', '*.jsx'],
+      rules: {
+        'no-unused-vars': ['error', { varsIgnorePattern: '^React$' }],
+        'react/prop-types': 'off',
+      },
+    },
+  ],
+};
