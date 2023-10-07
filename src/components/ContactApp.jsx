@@ -5,10 +5,13 @@ import { getData } from '../utils/data';
 class ContactApp extends React.Component {
   constructor(props) {
     super(props);
+
+    // inisialisasi state
     this.state = {
       contacts: getData(),
     };
 
+    // binding event handler
     this.onDeleteHandler = this.onDeleteHandler.bind(this);
   }
 
